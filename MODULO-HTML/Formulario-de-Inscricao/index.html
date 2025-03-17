@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>Criando um fomrulario</title>
+  </head>
+
+  <body>
+    <form>
+    <div>
+      <h1>Formulario de Inscrição</h1>
+
+      <label for="nome">Nome</label>
+      <input 
+      type="text" 
+      name="name" 
+      id="nome" 
+      placeholder="Ex: Gustavo" 
+      required/>
+    </div>
+
+    <br />
+
+    <div>
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Ex:SeuNome@gmail.com"
+        required
+      />
+    </div>
+
+    <br />
+
+    <div>
+      <label>Área de Atuação :</label><br />
+      <input 
+       type="radio" 
+       name="desenvolvimento" 
+       id="desenvolvimento"
+       value="dev" 
+       required 
+      />
+      <label for="desenvolvimento">Desenvolvimento</label>
+
+      <input 
+       type="radio" 
+       name="QA" 
+       id="QA"
+       value="qa"
+       required  
+       />
+      <label for="QA">Quallity Assurance (QA)</label>
+
+      <input 
+       type="radio" 
+       name="analise de dados" 
+       id="analise de dados"
+       required
+       value="dados"  
+       />
+      <label for="analise de dados">Analise de Dados</label>
+
+      <input 
+       type="radio" 
+       name="infraestrutura" 
+       id="infraestrutura"
+       required 
+       value="infra"
+       />
+      <label for="infraestrutura">Infraestrutura</label>
+
+      <br /><br />
+
+      <label>Observações :</label>
+      <br />
+      <textarea></textarea>
+      <br /><br />
+
+      <label>Desejo receber novidades e ofertas por email</label><br>
+      <input type="checkbox" />
+    </div>
+
+    <br />
+    <button type="submit">Enviar</button>
+  </form>
+  </body>
+</html>

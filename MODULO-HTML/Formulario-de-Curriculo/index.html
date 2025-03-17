@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Inputs do HTML</title>
+  </head>
+  <body>
+
+    <form>
+    <div>
+      <h1>Preencha o formulário</h1>
+    </div>
+
+    <div>
+      <label for="nome"><h4>Digite seu Nome :</h4></label>
+      <input
+        type="text"
+        name="nome"
+        id="nome"
+        placeholder="Digite seu nome completo"
+      />
+    </div>
+    <br />
+    <div>
+      <label for="email"><h4>Digite seu Email :</h4></label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Digite seu email"
+      />
+    </div>
+    <br />
+    <div>
+      <label for="senha"><h4>Digite sua Senha :</h4></label>
+      <input
+        type="password"
+        name="senha"
+        id="senha"
+        placeholder="Digite sua Senha"
+      />
+    </div>
+    <br>
+    <div>
+      <label></label><h4>Qual seu Gênero :</h4></label>
+      <input type="radio" name="genero" id="masculino" value="m"/>
+      <label for="masculino">Masculino</label>
+      <input type="radio" name="genero" id="feminino" value="f"/>
+      <label for="feminino">Feminino</label>
+    </div>
+    <br>
+    <div>
+        <label><h4>Fale um pouco mais Sobre você :</h4></label>
+        <textarea cols="40" rows="6" placeholder="Fale um pouco da sua Hitoria"></textarea>
+    </div>
+    <br>
+    <div>
+        <label for=""><h4>Anexe seu Curriculo :</h4></label>
+        <input type="file">
+    </div>
+
+    <br /><br />
+
+    <button type="submit">Enviar</button>
+</form>
+  </body>
+</html>
