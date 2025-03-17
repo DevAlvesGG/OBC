@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header,footer{
+    margin-left: 25px;
+    width: 800px;
+    background-color: #615f5f;
+    color: #fff;
+    border-radius: 7px;
+    padding-left: 30px;
+}
+ nav a{
+    color: #ff0000;
+ }
+
+ nav>a{
+    color: aqua;
+    padding: 25px;
+ }
+
+ .laranja{
+    color: #ffa500;
+ }
+ .verde{
+    color: #008000;
+ }
+ #secao-principal>*{
+    margin: 10px;
+ }
+ input+input{
+    display: block;
+    margin-top: 25px;
+ }
+
+ input[type="text"]{
+    background-color: #ff0000;
+ }
+ input[name=password]{
+    background-color: #008000;
+ }
