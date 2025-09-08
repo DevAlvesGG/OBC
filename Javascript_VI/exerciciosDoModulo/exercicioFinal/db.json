@@ -1,0 +1,69 @@
+{
+  "transactions": [
+    {
+      "name": "Freela",
+      "amount": 600,
+      "id": "1"
+    },
+    {
+      "name": "Salário",
+      "amount": 3200,
+      "id": "3"
+    },
+    {
+      "name": "Conta de água",
+      "amount": -60,
+      "id": "4"
+    },
+    {
+      "name": "Conta de luz",
+      "amount": -150,
+      "id": "5"
+    },
+    {
+      "id": "bba4",
+      "name": "game",
+      "amount": 200
+    },
+    {
+      "id": "95fb",
+      "name": "conta de agua",
+      "amount": 200
+    },
+    {
+      "id": "b464",
+      "name": "game",
+      "amount": -300
+    },
+    {
+      "id": "f1d5",
+      "name": "conta de agua",
+      "amount": 2000
+    },
+    {
+      "id": "83e5",
+      "name": "game",
+      "amount": -2000
+    },
+    {
+      "id": "6566",
+      "name": "conta de luz",
+      "amount": -300
+    },
+    {
+      "id": "6f4e",
+      "name": "nhacoma",
+      "amount": -300
+    },
+    {
+      "id": "7801",
+      "name": "bike",
+      "amount": -1000
+    },
+    {
+      "id": "de11",
+      "name": "conta de agua",
+      "amount": 3000
+    }
+  ]
+}

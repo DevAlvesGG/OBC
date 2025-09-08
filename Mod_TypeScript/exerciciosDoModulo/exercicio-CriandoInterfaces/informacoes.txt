@@ -1,0 +1,14 @@
+função 1 :
+
+função que recebe um nome de  usuário do GitHub e realiza uma requisição Get para obter os dados dele através da API pública do GitHub
+
+Dica: {  
+    -A requisição deve ser feita através da seguinte URL (https://api.github.com/users/<nome_do_usuario>)
+    -Utilize a própria API fetch do javascript
+}
+
+Dica: {
+    -ao usar o Fetch o retorno será uma Response (pode ser percebido com a ajuda do TypeScript) que ainda precisa ser convertida para json.Isso pode ser obtido com a ajuda do método .json(), que retorna uma Promisse
+}
+
+

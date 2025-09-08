@@ -1,0 +1,24 @@
+Vamos criar um arquivo TypeScript que contem 4 funções:
+
+Primeira function:{
+    A primiera função, deve salvar um objeto spaceship com, no minimo as seguintes propriedades.
+    (name,pilot, crewlimit, crew, inMission)
+
+    //crewLimit = tamanhho máximo de tripulação que deverá ser inserido pelo usuário
+    //crew = um array de strings inicialmente vazio
+    //inMission = inicialmente deve ser falso
+}
+
+Segunda function:{
+    A segunda função, deve adicionar um membro a tripulação de uma determinada nave.
+    No entanto, o tamanho da tripulação não pode ser exedido.
+}
+
+Terceira function:{
+    A terceira função, deverá enviar uma determinada nave em uma missão, caso ela não esteja. Para isso, é preciso que 1/3 da sia tripulação esteja preenchida, arredondando para baixo.
+}
+
+Quarta function:{
+    A quarta função deverá listar todas as naves registradas e suas respectivas informações.
+}
+
