@@ -1,0 +1,150 @@
+:root{
+    --margin-reset:0%;
+    --padding-reset:0%;
+    --color-backgorund: #030207;
+    --color-withe: #fff;
+    --color-blue:#1474b4;
+    --font-padrao:"Play",sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: var(--margin-reset);
+    padding: var(--padding-reset);
+    box-sizing: border-box;
+}
+
+a{
+    color: var(--color-blue);
+}
+
+body{
+    background-color: var(--color-backgorund);
+    color: var(--color-withe);
+}
+
+/* ---------------------------INICIO DA CLASSE HERO------------------------- */
+
+.hero{
+
+    position: relative;
+    min-height: 100vh;
+    background-image: linear-gradient(rgb(0,0,0,0.1),var(--color-backgorund) );
+
+}
+
+.hero__video__background{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    z-index:-1;
+    top: 0; /*(top: 0;)  Utilizado para posicionar o elemento no topo da tela*/
+}
+
+.hero__foreground{
+    text-align: center;
+    padding-top: 40vh;
+    font-family: var(--font-padrao) ;
+    letter-spacing: 5px;
+}
+
+.hero__title{
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.hero__text{
+    padding-top: 4vh;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+/* ---------------------------FIM DA CLASSE HERO------------------------- */
+
+/* ---------------------------INICIO DA CLASSE SECTION------------------------- */
+
+.section{
+    position: relative;
+    text-align: center;
+    font-family: var(--font-padrao);
+    overflow: hidden;  /*(overflow: hidden;)  Utilizado para todo elemento que for maior do que 
+                        minha largura e altura determinada, não será visivel*/
+
+}
+
+.section__title{
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.section__img,
+.section__img-inline{    
+    object-fit: cover;  /*(object-fit: cover;)  Utilizado para que a imagem se ajuste ao tamanho
+                                                do container independendte da largura e altura */
+    width: 100vw;
+    border-radius: 0.75rem;
+    box-shadow: 0 1rem 5rem -0.5rem rgb(20,116,180,0.25);
+    object-position: top;
+    max-height: 30rem;  /*(max-height: 30rem;)  Utilizado para limitar a altura da imagem*/
+}
+
+.section__text,
+.section__text-inline{
+    font-size: 1.25rem;
+    line-height: 2rem; /*(line-height: 1.75rem;)  Utilizado para aumentar o tamanho de espaçamento entre as linhas*/
+    margin: 4rem auto;
+}
+
+.section__img-inline{
+    border-top-left-radius: 4rem; /*(border-top-left-radius: 4rem;)  Utilizado para arredondar a borda superior esquerda da imagem*/
+    border-bottom-right-radius: 4rem;
+    float: left; /*(float: left;)  Utilizado para flotoar a imagem a esquerda*/
+    margin-right: 4rem;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+    height: 25rem;
+    width: 20rem;
+}
+
+.section__img{
+    width: 90%;
+}
+.section__text-inline,
+.section__text-inline p{
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+#hangouts{
+    object-position:center;
+}
+
+.gallery__img{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    height: 16rem;
+    width: 16rem;
+    transform:rotate(-3deg);/*(transform:rotate(-2deg))  Utilizado para rotacionar a imagem em -2 graus*/
+}
+
+.gallery__img-wrapper{
+    display: inline-block;
+    position: relative;
+}
+
+.gallery__img-wrapper:nth-child(2n) > .gallery__img{
+    transform: rotate(3deg);
+    top: 1rem;
+}
+
+.footer{
+    margin-top: 4rem;
+    text-align: center;
+    padding: 2rem;
+}
