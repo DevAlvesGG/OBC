@@ -1,5 +1,6 @@
 const os = require("node:os")
 
+
 const plataforma = os.platform()
 console.log("Plataforma do SO: ", plataforma)
 
