@@ -1,0 +1,20 @@
+ °°°Buffers no Node.js são como pequenos contêineres temporários de memória, usados para armazenar dados brutos, ou seja, dados binários. Pense neles como uma sequência de bytes, similar a um array de inteiros.
+
+
+°°°A principal diferença entre um buffer e um array comum é que o buffer lida diretamente com a alocação de memória fora do V8 (o motor JavaScript do Node.js). Isso o torna extremamente eficiente para operações de baixo nível, como lidar com dados de arquivos, criptografia ou tráfego de rede.
+
+-------------------------------------------------------
+
+
+°°°Quando e por que usar Buffers?
+
+°°°Os buffers são essenciais para lidar com dados que não são strings ou números simples. Eles são usados principalmente em:
+
+ - Streams: Quando você lê dados de uma stream, eles geralmente vêm em pedaços (chunks) na forma de buffers.
+
+ - Manipulação de arquivos: Ler ou escrever dados binários em arquivos, como imagens, áudio ou executáveis.
+
+ - Rede: O Node.js usa buffers para lidar com o corpo de requisições HTTP ou dados transmitidos por um socket TCP.
+
+ - Operações binárias: Como criptografia, compressão e descompressão de dados.
+

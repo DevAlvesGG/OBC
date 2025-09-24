@@ -1,0 +1,31 @@
+Streams no Node.js são uma forma de processar dados em pedaços (chunks) em vez de carregar tudo na memória de uma vez. Imagine um grande arquivo de texto, como um livro inteiro. Em vez de ler o livro todo de uma vez e armazená-lo na memória do seu computador, que consumiria muitos recursos, você lê página por página, processa o que precisa e depois passa para a próxima página.
+
+Essa abordagem é ideal para lidar com grandes volumes de dados de forma eficiente e escalável, como:
+
+ - Leitura e escrita de arquivos grandes: Em vez de usar fs.readFile, que lê o arquivo inteiro, você pode usar fs.createReadStream para ler o arquivo em pedaços.
+
+ - Transmissão de dados via rede: Em uma requisição HTTP, o Node.js lida com os dados do corpo (body) como uma stream. Isso permite que você comece a processar os dados da requisição antes mesmo de ter recebido tudo.
+
+
+Streams no Node.js são uma forma de processar dados em pedaços (chunks) em vez de carregar tudo na memória de uma vez. Imagine um grande arquivo de texto, como um livro inteiro. Em vez de ler o livro todo de uma vez e armazená-lo na memória do seu computador, que consumiria muitos recursos, você lê página por página, processa o que precisa e depois passa para a próxima página.
+
+Essa abordagem é ideal para lidar com grandes volumes de dados de forma eficiente e escalável, como:
+
+ - Leitura e escrita de arquivos grandes: Em vez de usar fs.readFile, que lê o arquivo inteiro, você pode usar fs.createReadStream para ler o arquivo em pedaços.
+
+ - Transmissão de dados via rede: Em uma requisição HTTP, o Node.js lida com os dados do corpo (body) como uma stream. Isso permite que você comece a processar os dados da requisição antes mesmo de ter recebido tudo.
+
+------------------------------------------------------------------------------------
+
+Tipos de Streams
+
+Existem quatro tipos principais de streams no Node.js:
+
+ - Readable (Leitura): Streams de onde você pode ler dados. Exemplo: fs.createReadStream().
+
+ - Writable (Escrita): Streams para onde você pode escrever dados. Exemplo: fs.createWriteStream().
+
+ - Duplex (Dupla): Streams que são tanto de leitura quanto de escrita. Exemplo: um socket TCP (net.Socket).
+
+ - Transform (Transformação): Um tipo de stream Duplex onde a saída é uma versão modificada da entrada. Exemplo: zlib.createGzip() para compressão de dados.
+
