@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastros</title>
+    <link rel="stylesheet" href="/emailList.css">
+</head>
+<body>
+     <h1>Emails cadastrados</h1>
+
+    <ul>
+        <% users.forEach(user => { %>
+            <li>
+                <span><%= user.email %></span>
+
+                <form action="/delete-email/<%= user.id %>" method="POST">
+                    <button type="submit" class="btn-delete">Excluir</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+    
+     <a href="/" class="btn-voltar">Voltar</a>
+</body>
+</html>
