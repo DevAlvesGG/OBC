@@ -8,7 +8,7 @@ const app = express()
 app.use(express.static(path.join(__dirname, 'public')))
 
 //configuração para receber dados de formulários
-app.set(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: true }))
 
 //configuração do EJS
 app.set('view engine', 'ejs')

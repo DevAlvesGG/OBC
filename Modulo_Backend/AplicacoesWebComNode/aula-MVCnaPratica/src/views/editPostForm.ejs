@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <div class="container">
+        <h1>Editar Post</h1>
+
+        <form action="/admin/update/<%= post.id %>" method="POST" class="post-form">
+            <label for="title">Título:</label>
+            <input type="text" id="title" name="title" value="<%= post.title %>" required>
+
+            <label for="content">Conteúdo:</label>
+            <textarea id="content" name="content" rows="10" required><%= post.content %></textarea>
+
+            <button  type="submit" class="btn-submit">Salvar Alterações</button>
+            
+        </form>
+    </div>
+
+    <%- include('partials/footer') %>
+</body>
+</html>

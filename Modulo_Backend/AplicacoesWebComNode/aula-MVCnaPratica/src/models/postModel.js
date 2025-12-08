@@ -1,12 +1,14 @@
+const { v4: uuidv4 } = require('uuid');
+
 let post = [{
-    id: '1',
+    id: uuidv4(),
     title: 'Primeiro Post',
     content: 'Conteúdo do primeiro post',
     createdAt: new Date(),
     updatedAt: new Date()
 },
 {
-    id: '2',
+    id: uuidv4(),
     title: 'Segundo Post',
     content: 'Conteúdo do segundo post',
     createdAt: new Date(),
@@ -27,21 +29,27 @@ const postModel = { //objeto com metodos
 
     createdPost(title, content) { //cria um novo post com title e content passados nos parametros
         const post = {
-            id: Date.now().toString(),
+            id: uuidv4(),
             title: title,
             content: content,
             createdAt: new Date(),// criado na hora atual
             updatedAt: new Date()// atualizado na hora atual
         }
+        return post
     },
 
-    savePost(post){ //salva o post no array de posts
-        post.unshift(post)
+    savePost(posts){ //salva o post no array de posts
+        post.unshift(posts)
     },
 
     updatePost(id,updatedPost) {
-        const index = post.filter(post => post.id === id)
-        post[index] = { ...post[index], ...updatedPost, updatedAt: new Date()}
+        const index = post.findIndex(post => post.id === id)
+
+        if (index !== -1) {
+            post[index] = { ...post[index], ...updatedPost, updatedAt: new Date()}
+        }else {
+            console.error(`Post com id ${id} não encontrado.`)
+        } 
     },
 
     deletePost(id) {

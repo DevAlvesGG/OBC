@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <div class="container">
+        <h1>Criar Novo Post</h1>
+
+        <form action="/admin/create" method="POST" class="new-post-form">
+            <div class="form-group">
+                <label for="title">Título:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="content">Conteúdo:</label>
+                <textarea id="content" name="content" rows="10" required></textarea>
+            </div>
+
+            <div class="btn-group">
+                <button type="submit" class="btn-submit">Criar</button>
+
+                <a href="/admin" class="btn-cancel">Voltar</a>
+            </div>
+
+        </form>
+
+    <%- include('partials/footer') %>
+</body>
+</html>
