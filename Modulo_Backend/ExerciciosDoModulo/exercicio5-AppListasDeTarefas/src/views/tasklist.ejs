@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskList</title>
+</head>
+
+<body>
+    <%- include('partials/header') %>
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Minhas Tarefas</h1>
+            <a href="/tasklist/new" class="btn btn-primary btn-lg"> + Nova Tarefa </a>
+        </div>
+
+        <ul class="list-group shadow-sm">
+            <% if (tasks && tasks.length> 0) { %> <% tasks.forEach(task=> { %>
+
+                    <li
+                        class="list-group-item d-flex justify-content-between align-items-center <%= task.completed ? 'list-group-item-success' : '' %>">
+                        <div class="<%= task.completed ? 'text-decoration-line-through' : '' %>">
+                            <h5 class="mb-1">
+                                <a href="/tasks/<%= task.id %>" class="text-decoration-none text-dark">
+                                    <%= task.title %>
+                                </a>
+                            </h5>
+                        </div>
+
+                        <div class="task-actions d-flex align-items-center">
+                            <form action="/tasklist/complete/<%= task.id %>" method="POST" style="display: inline">
+                                <button type="submit"
+                                    class="btn btn-sm me-2 <%= task.completed ? 'btn-success' : 'btn-outline-secondary' %>">
+                                    <%= task.completed ? '✓ Completa' : 'Check' %>
+                                </button>
+                            </form>
+
+                            <form action="/tasklist/delete/<%= task.id %>" method="POST" style="display: inline">
+                                <button type="submit" class="btn btn-sm btn-danger me-2">
+                                    Deletar
+                                </button>
+                            </form>
+
+                            <form action="/tasklist/edit/<%= task.id %>" method="GET" style="display: inline">
+                                <button class="btn btn-sm btn-outline-secondary">Editar</button>
+                            </form>
+                        </div>
+                    </li>
+
+                    <% }); %>
+                        <% } else { %>
+                            <li class="list-group-item text-center text-muted p-4">
+                                🎉 Não há tarefas pendentes! Adicione uma nova para começar.
+                            </li>
+                            <% } %>
+        </ul>
+        <%- include('partials/footer') %>
+</body>
+
+</html>

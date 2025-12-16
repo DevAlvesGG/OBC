@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Tarefa</title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>
+            Editar Tarefa: <span class="text-primary">
+                <%= task.title %>
+            </span>
+        </h1>
+    </div>
+
+    <div class="card shadow-sm p-4">
+        <form action="/tasklist/edit/<%= task.id %>" method="POST">
+            <div class="mb-3">
+                <label for="title" class="form-label">Título</label>
+                <input type="text" class="form-control" id="title" name="title" value="<%= task.title %>" required />
+            </div>
+
+            <div class="mb-4">
+                <label for="content" class="form-label">Conteúdo/Descrição</label>
+                <textarea class="form-control" id="content" name="content" rows="4" required>
+<%= task.content %></textarea>
+            </div>
+
+            <div class="d-flex justify-content-end">
+                <a href="/tasklist" class="btn btn-secondary me-3"> Cancelar </a>
+                <button type="submit" class="btn btn-success">
+                    Salvar Alterações
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

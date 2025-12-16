@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Tarefa</title>
+</head>
+<body>
+    <div class="container">
+
+        <h2>Criar Nova Tarefa</h2>
+        
+        <form action="/tasklist/new" method="POST">
+
+            <div class="div-title">
+                <label for="title">Nome da Tarefa:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+            <div class="div-content">
+                <label for="content">Descrição:</label>
+                <textarea name="content" 
+                    id="content"
+                    placeholder="Detalhe o que precisa ser feito..."
+                    rows="4"
+                    required></textarea>
+            </div>
+
+            <button type="submit">
+                Salvar Tarefa
+            </button>
+        </form>
+    </div>
+</body>
+</html>
