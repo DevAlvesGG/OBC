@@ -1,6 +1,4 @@
-const users = [
-    { username: 'admin', password: '1234' },
-];
+const users = require('../model/users');
 
 module.exports = {
 // GET /
@@ -32,7 +30,7 @@ module.exports = {
         if (userExist) {
             return res.redirect('/');
         }else {
-            const newUser = { username, password };
+            const newUser = { username, password, role: 'standart' };
             users.push(newUser)
 
             req.session.authenticated = true;
