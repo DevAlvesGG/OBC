@@ -59,7 +59,7 @@ module.exports = {
         if(userIndex === -1) {
             return null;
         }
-        const deletedUser = users.splice(userIndex, 1);
+        const [deletedUser] = users.splice(userIndex, 1);
         return deletedUser;
     }
 };
