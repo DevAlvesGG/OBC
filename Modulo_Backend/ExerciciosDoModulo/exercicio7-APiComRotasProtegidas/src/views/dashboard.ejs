@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Dashboard - Usuários</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align:left; }
+    th { background: #f2f2f2; }
+    .empty { color: #666; }
+  </style>
+</head>
+<body>
+  <h1>Usuários cadastrados</h1>
+  <% if (users && users.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Função</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach(function(user) { %>
+          <tr>
+            <td><%= user.name || '-' %></td>
+            <td><%= user.email %></td>
+            <td><%= user.role || 'user' %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <p class="empty">Nenhum usuário cadastrado.</p>
+  <% } %>
+
+  <p><a href="/">Voltar</a></p>
+</body>
+</html>
